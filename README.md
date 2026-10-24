@@ -205,7 +205,21 @@
 Формат вывода: сокращённый хэш, дата, имя автора, комментарий.
 
 ```
-<ВСТАВИТЬ ВЫВОД КОМАНДЫ ИЗ ШАГА 15>
+7aa6d9a - Sat Oct 24 15:09:32 2026 +0300 - 4515 Попков И. Р. - Added 14-16 steps and other
+f56f221 - Sat Oct 24 15:08:31 2026 +0300 - 4515 Попков И. Р. - Added steps 7-13
+cda926c - Sat Oct 24 15:04:34 2026 +0300 - 4515 Попков И. Р. - Added screenshots and 1-6 steps
+51a09f5 - Sat Oct 24 14:34:09 2026 +0300 - 4515 Попков И. Р. - Revert "Added ForDelete"
+135127c - Sat Oct 24 14:31:35 2026 +0300 - 4515 Попков И. Р. - Added ForDelete
+7e3e99e - Sat Oct 24 14:31:03 2026 +0300 - 4515 Попков И. Р. - Added info in Step6
+4722f0a - Sat Oct 24 14:30:18 2026 +0300 - 4515 Попков И. Р. - Added Ex1
+e0d2e04 - Sat Oct 24 14:25:46 2026 +0300 - 4515 Попков И. Р. - Merge branch 'feature'
+4872feb - Sat Oct 24 14:18:45 2026 +0300 - 4515 Попков И. Р. - Added info in branch master
+190d606 - Sat Oct 24 14:16:24 2026 +0300 - 4515 Попков И. Р. - Added some letters
+8681fe9 - Sat Oct 24 14:08:42 2026 +0300 - ExoDus234 - Add Step6 file for local storage implementation
+921f53b - Sat Nov 21 20:09:49 2020 +0300 - Kurtyanik - Обновление информации
+c08a654 - Sat Nov 21 20:02:16 2020 +0300 - Kurtyanik - Файл создан пустым
+3c6e913 - Sat Nov 21 19:58:20 2020 +0300 - Kurtyanik - Initial commit
+
 ```
 
 После добавления истории в отчёт выполнена финальная фиксация изменений.
@@ -275,3 +289,15 @@ git log --oneline
 git revert 135127c
 git log --oneline
 git switch -c report
+git add .
+git commit -m "Added screenshots and 1-6 steps"
+git add .
+git commit -m "Added steps 7-13"
+git add .
+git commit -m "Added 14-16 steps and other"
+git log --pretty=format:"%h - %ad - %an - %s"
+git add .
+git commit -m "Final commit"
+git push -u origin report 
+git switch master
+git push
